@@ -62,6 +62,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Flutter ios找不到文件的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/23/Flutter ios找不到文件的问题/" class="article-date">
+  <time datetime="2018-05-22T23:12:12.000Z" itemprop="datePublished">2018-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/23/Flutter ios找不到文件的问题/">Flutter ios找不到文件的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当你的Flutter项目出现这个问题，且你确定没有其他错误的时候，可以将你的cocoapods退回到1.4.0版本，即删除1.5，重装1.4</p>
+<p>错误描述：（修改了名称）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">=== BUILD TARGET your_target OF PROJECT Pods WITH CONFIGURATION Debug ===</span><br><span class="line">    &lt;module-includes&gt;:<span class="number">1</span>:<span class="number">9</span>: note: <span class="keyword">in</span> file included <span class="keyword">from</span> &lt;module-includes&gt;:<span class="number">1</span>:</span><br><span class="line">    <span class="comment">#import "Headers/your_target-yourfilename.h"</span></span><br><span class="line">            ^</span><br><span class="line">    /Users/yourname/flutter_projects/your_target/example/ios/Pods/Target Support Files/your_target/your_target-yourfilename.h:<span class="number">13</span>:<span class="number">9</span>: note: <span class="keyword">in</span> file included <span class="keyword">from</span> /Users/yourname/flutter_projects/your_target/example/ios/Pods/Target Support Files/your_target/your_target-yourfilename.h:<span class="number">13</span>:</span><br><span class="line">    <span class="comment">#import "YourFileName.h"</span></span><br><span class="line">            ^</span><br><span class="line">    /Users/yourname/flutter_projects/your_target/ios/Classes/YourFileName.h:<span class="number">1</span>:<span class="number">9</span>: error: <span class="string">'Flutter/Flutter.h'</span> file <span class="keyword">not</span> found</span><br><span class="line">    <span class="comment">#import &lt;Flutter/Flutter.h&gt;</span></span><br></pre></td></tr></table></figure>
+<p>解决方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">卸载cocoapods：$sudo gem uninstall cocoapods</span><br><span class="line">安装cocoapods <span class="number">1.4</span>版本：$sudo gem install cocoapods -v <span class="number">1.4</span></span><br><span class="line">cd到你项目根目录执行：$pod update</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lilrocks.com/2018/05/23/Flutter ios找不到文件的问题/" data-id="cjhibjo7j00007q9k0ym0500r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="flutter-Flutter doctor 出现的问题" class="article article-type-flutter" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/21/Flutter doctor 出现的问题/" class="article-date">
@@ -94,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lilrocks.com/2018/05/21/Flutter doctor 出现的问题/" data-id="cjhib8eaj0001ls9k1h4idk5u" class="article-share-link">Share</a>
+      <a data-url="http://lilrocks.com/2018/05/21/Flutter doctor 出现的问题/" data-id="cjhibcs2o0001ht9kywmtip0n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lilrocks.com/2018/05/21/hello-world/" data-id="cjhib8eab0000ls9kkjt3avs7" class="article-share-link">Share</a>
+      <a data-url="http://lilrocks.com/2018/05/21/hello-world/" data-id="cjhibcs2v0002ht9k16p20ttt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,6 +218,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/05/23/Flutter ios找不到文件的问题/">Flutter ios找不到文件的问题</a>
+          </li>
         
           <li>
             <a href="/2018/05/21/Flutter doctor 出现的问题/">flutter doctor后出现的问题</a>
